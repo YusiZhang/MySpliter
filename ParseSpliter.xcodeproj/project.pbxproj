@@ -37,6 +37,9 @@
 		27E79C03190B442F004F92A9 /* CreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E79C02190B442F004F92A9 /* CreationViewController.m */; };
 		AFECACA8190E08A200E158BB /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACA7190E08A200E158BB /* normal.png */; };
 		AFECACAA190E0A5C00E158BB /* historyBT.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACA9190E0A5C00E158BB /* historyBT.png */; };
+		AFECACAC190EB6E000E158BB /* BlueBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACAB190EB6E000E158BB /* BlueBackground.png */; };
+		AFECACAE190EB6ED00E158BB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACAD190EB6ED00E158BB /* logo.png */; };
+		AFECACB0190EB72400E158BB /* fb-login-button.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACAF190EB72400E158BB /* fb-login-button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		27E79C02190B442F004F92A9 /* CreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreationViewController.m; sourceTree = "<group>"; };
 		AFECACA7190E08A200E158BB /* normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal.png; sourceTree = "<group>"; };
 		AFECACA9190E0A5C00E158BB /* historyBT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historyBT.png; sourceTree = "<group>"; };
+		AFECACAB190EB6E000E158BB /* BlueBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueBackground.png; sourceTree = "<group>"; };
+		AFECACAD190EB6ED00E158BB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		AFECACAF190EB72400E158BB /* fb-login-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fb-login-button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,9 @@
 				277E0654190CF1D000291E49 /* GeoPointAnnotation.h */,
 				277E0655190CF1D000291E49 /* GeoPointAnnotation.m */,
 				275F9BD819089E390064134C /* Images.xcassets */,
+				AFECACAF190EB72400E158BB /* fb-login-button.png */,
+				AFECACAD190EB6ED00E158BB /* logo.png */,
+				AFECACAB190EB6E000E158BB /* BlueBackground.png */,
 				AFECACA9190E0A5C00E158BB /* historyBT.png */,
 				AFECACA7190E08A200E158BB /* normal.png */,
 				275F9BC719089E380064134C /* Supporting Files */,
@@ -307,8 +316,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				275F9BD919089E390064134C /* Images.xcassets in Resources */,
+				AFECACAC190EB6E000E158BB /* BlueBackground.png in Resources */,
 				275F9BCB19089E380064134C /* InfoPlist.strings in Resources */,
 				AFECACA8190E08A200E158BB /* normal.png in Resources */,
+				AFECACAE190EB6ED00E158BB /* logo.png in Resources */,
+				AFECACB0190EB72400E158BB /* fb-login-button.png in Resources */,
 				AFECACAA190E0A5C00E158BB /* historyBT.png in Resources */,
 				275F9BD419089E390064134C /* Main.storyboard in Resources */,
 			);

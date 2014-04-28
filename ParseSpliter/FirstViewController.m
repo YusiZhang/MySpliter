@@ -54,6 +54,24 @@
         
         logInViewController.facebookPermissions = @[@"friends_about_me"];
         
+        logInViewController.logInView.backgroundColor = [UIColor colorWithPatternImage:
+                                                         [UIImage imageNamed:@"BlueBackground.png"]];
+        
+        
+        
+        logInViewController.logInView.logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
+        
+        logInViewController.logInView.logo.frame = CGRectMake(66.5f, 70.0f, 180.0f, 110.5f);
+        
+        [logInViewController.logInView.facebookButton setImage: nil forState:UIControlStateNormal];
+        [logInViewController.logInView.facebookButton setImage: nil  forState:UIControlStateHighlighted];
+        
+        [logInViewController.logInView.facebookButton setBackgroundImage:[UIImage imageNamed:@"fb-login-button.png"] forState:UIControlStateHighlighted];
+        [logInViewController.logInView.facebookButton setBackgroundImage:[UIImage imageNamed:@"fb-login-button.png"] forState:UIControlStateNormal];
+        [logInViewController.logInView.facebookButton setTitle:@"" forState:UIControlStateNormal];
+        [logInViewController.logInView.facebookButton setTitle:@"" forState:UIControlStateHighlighted];
+
+        
         // Present the log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
 

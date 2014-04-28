@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L1e-vo-66l" customClass="FBProfilePictureView">
-                                <rect key="frame" x="76" y="77" width="168" height="140"/>
+                                <rect key="frame" x="20" y="83" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -27,9 +27,9 @@
                     <navigationItem key="navigationItem" id="yop-zE-sfp">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="bMu-e5-Xu1">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f9B-ye-drw">
-                                <rect key="frame" x="16" y="7" width="104" height="30"/>
+                                <rect key="frame" x="16" y="7" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Check Balance">
+                                <state key="normal" title="History">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -58,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6I-1W-lVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-269" y="-325"/>
+            <point key="canvasLocation" x="-267" y="-316"/>
         </scene>
         <!--Creation View Controller-->
         <scene sceneID="CTn-cR-RA8">

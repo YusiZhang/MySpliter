@@ -35,6 +35,8 @@
 		27E79BFD190B3575004F92A9 /* Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E79BFC190B3575004F92A9 /* Bill.m */; };
 		27E79C00190B3D3B004F92A9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E79BFF190B3D3B004F92A9 /* FirstViewController.m */; };
 		27E79C03190B442F004F92A9 /* CreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E79C02190B442F004F92A9 /* CreationViewController.m */; };
+		AFECACA8190E08A200E158BB /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACA7190E08A200E158BB /* normal.png */; };
+		AFECACAA190E0A5C00E158BB /* historyBT.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACA9190E0A5C00E158BB /* historyBT.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		27E79BFF190B3D3B004F92A9 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		27E79C01190B442F004F92A9 /* CreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreationViewController.h; sourceTree = "<group>"; };
 		27E79C02190B442F004F92A9 /* CreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreationViewController.m; sourceTree = "<group>"; };
+		AFECACA7190E08A200E158BB /* normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal.png; sourceTree = "<group>"; };
+		AFECACA9190E0A5C00E158BB /* historyBT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historyBT.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,8 @@
 				277E0654190CF1D000291E49 /* GeoPointAnnotation.h */,
 				277E0655190CF1D000291E49 /* GeoPointAnnotation.m */,
 				275F9BD819089E390064134C /* Images.xcassets */,
+				AFECACA9190E0A5C00E158BB /* historyBT.png */,
+				AFECACA7190E08A200E158BB /* normal.png */,
 				275F9BC719089E380064134C /* Supporting Files */,
 			);
 			path = ParseSpliter;
@@ -302,6 +308,8 @@
 			files = (
 				275F9BD919089E390064134C /* Images.xcassets in Resources */,
 				275F9BCB19089E380064134C /* InfoPlist.strings in Resources */,
+				AFECACA8190E08A200E158BB /* normal.png in Resources */,
+				AFECACAA190E0A5C00E158BB /* historyBT.png in Resources */,
 				275F9BD419089E390064134C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

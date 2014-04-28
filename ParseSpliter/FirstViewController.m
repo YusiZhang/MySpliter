@@ -79,6 +79,14 @@
             NSDictionary *userData = (NSDictionary *)result;
             NSString *facebookID = userData[@"id"];
             self.profile_uiview.profileID = facebookID;
+            
+            self.profile_uiview.layer.cornerRadius = self.profile_uiview.frame.size.width / 2;
+//            self.profile_uiview.layer.cornerRadius = self.profile_uiview.frame.size.width / 2;
+//
+//            self.profile_uiview.clipsToBounds = YES;
+//            
+//            self.profile_uiview.layer.borderWidth = 3.0f;
+//            self.profile_uiview.layer.borderColor = [UIColor whiteColor].CGColor;
         }
     }];
     

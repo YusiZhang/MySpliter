@@ -88,6 +88,42 @@
 //            
 //            self.profile_uiview.layer.borderWidth = 3.0f;
 //            self.profile_uiview.layer.borderColor = [UIColor whiteColor].CGColor;
+            //fetch user's bill info and calculate overall balance;
+            //calculate positive1
+            NSString *name = userData[@"name"];
+            NSLog(@"Login name is %@", name);
+            PFQuery *query = [PFQuery queryWithClassName:@"Bill"];
+            
+            [query whereKey:@"owner" equalTo:name];
+            NSLog(query.debugDescription);
+            NSArray *objArray = [query findObjects];
+            double positive = 0;
+            
+            for ( PFObject *object in objArray) {
+                positive += [object[@"amount"] doubleValue];
+            }
+            NSNumber *number = [[NSNumber alloc] initWithDouble: positive];
+            NSLog(@"positive amount is %@",[number stringValue]);
+            
+            //calculate negetive2
+            PFQuery *query2 = [PFQuery queryWithClassName:@"Bill"];
+            [query2 whereKey:@"ownee" equalTo:name];
+            NSArray *objArray2 = [query2 findObjects];
+            NSLog(@"%@",objArray2.debugDescription);
+
+            //nonosfe
+            double negetive = 0;
+            
+            for ( PFObject *object2 in objArray2) {
+                negetive += [object2[@"amount"] doubleValue];
+            }
+            NSNumber *number2 = [[NSNumber alloc] initWithDouble: negetive];
+            NSLog(@"negetive amount is %@",[number2 stringValue]);
+            
+            double balance = positive - negetive;
+            
+
+            
         }
     }];
     

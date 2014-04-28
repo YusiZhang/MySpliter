@@ -104,6 +104,7 @@
             NSArray *objArray2 = [query2 findObjects];
             NSLog(@"%@",objArray2.debugDescription);
 
+            //nono
             double negetive = 0;
             
             for ( PFObject *object2 in objArray2) {

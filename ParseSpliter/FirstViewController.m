@@ -38,6 +38,8 @@
     name = [[NSString alloc]init];
     NSLog(@"Bundle ID: %@",[[NSBundle mainBundle] bundleIdentifier]);
     
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"myspliter-2.png"]];
+    
     
 }
 

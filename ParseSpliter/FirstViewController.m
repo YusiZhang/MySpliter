@@ -12,6 +12,7 @@
 #import "MBProgressHUD.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "MyTableViewController.h"
+#import "Bill.h"
 
 
 @interface FirstViewController ()
@@ -59,9 +60,6 @@
 
     }
     
-    
-    
-    
 }
 
 #pragma mark - PFLogInViewControllerDelegate
@@ -70,6 +68,8 @@
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     
+    
+    
     //successfully login and set profile pic;
     FBRequest *request = [FBRequest requestForMe];
     // Send request to Facebook
@@ -77,6 +77,7 @@
         if (!error) {
             // result is a dictionary with the user's Facebook data
             NSDictionary *userData = (NSDictionary *)result;
+            //set profile pic
             NSString *facebookID = userData[@"id"];
             self.profile_uiview.profileID = facebookID;
             

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface FinalPrototypeAppDelegate : UIResponder <UIApplicationDelegate>
+@interface FinalPrototypeAppDelegate : UIResponder <UIApplicationDelegate,PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

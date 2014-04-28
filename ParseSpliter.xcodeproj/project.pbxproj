@@ -21,6 +21,20 @@
 		275F9BE219089E390064134C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275F9BC419089E380064134C /* UIKit.framework */; };
 		275F9BEA19089E390064134C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 275F9BE819089E390064134C /* InfoPlist.strings */; };
 		275F9BEC19089E390064134C /* ParseSpliterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 275F9BEB19089E390064134C /* ParseSpliterTests.m */; };
+		275F9BF81908A8F50064134C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275F9BF71908A8F50064134C /* CFNetwork.framework */; };
+		275F9BFA1908A94C0064134C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275F9BF91908A94C0064134C /* SystemConfiguration.framework */; };
+		275F9BFC1908A9EF0064134C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275F9BFB1908A9EF0064134C /* MobileCoreServices.framework */; };
+		275F9BFF1908B0DD0064134C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 275F9BFE1908B0DD0064134C /* MBProgressHUD.m */; };
+		275F9C021908B2800064134C /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275F9C011908B2800064134C /* MyTableViewController.m */; };
+		277E0649190C6E7E00291E49 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277E0648190C6E7E00291E49 /* CoreLocation.framework */; };
+		277E064C190C9F7C00291E49 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277E064A190C9F7C00291E49 /* Parse.framework */; };
+		277E064D190C9F7C00291E49 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277E064B190C9F7C00291E49 /* FacebookSDK.framework */; };
+		277E0650190CAA0200291E49 /* FBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277E064F190CAA0200291E49 /* FBLoginViewController.m */; };
+		277E0653190CD61E00291E49 /* DetailBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277E0652190CD61E00291E49 /* DetailBillViewController.m */; };
+		277E0656190CF1D000291E49 /* GeoPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 277E0655190CF1D000291E49 /* GeoPointAnnotation.m */; };
+		27E79BFD190B3575004F92A9 /* Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E79BFC190B3575004F92A9 /* Bill.m */; };
+		27E79C00190B3D3B004F92A9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E79BFF190B3D3B004F92A9 /* FirstViewController.m */; };
+		27E79C03190B442F004F92A9 /* CreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E79C02190B442F004F92A9 /* CreationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +67,30 @@
 		275F9BE719089E390064134C /* ParseSpliterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParseSpliterTests-Info.plist"; sourceTree = "<group>"; };
 		275F9BE919089E390064134C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		275F9BEB19089E390064134C /* ParseSpliterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseSpliterTests.m; sourceTree = "<group>"; };
+		275F9BF519089EA70064134C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
+		275F9BF71908A8F50064134C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		275F9BF91908A94C0064134C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		275F9BFB1908A9EF0064134C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		275F9BFD1908B0DD0064134C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		275F9BFE1908B0DD0064134C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		275F9C001908B2800064134C /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		275F9C011908B2800064134C /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		277E0648190C6E7E00291E49 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		277E064A190C9F7C00291E49 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		277E064B190C9F7C00291E49 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		277E064E190CAA0200291E49 /* FBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginViewController.h; sourceTree = "<group>"; };
+		277E064F190CAA0200291E49 /* FBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginViewController.m; sourceTree = "<group>"; };
+		277E0651190CD61E00291E49 /* DetailBillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailBillViewController.h; sourceTree = "<group>"; };
+		277E0652190CD61E00291E49 /* DetailBillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailBillViewController.m; sourceTree = "<group>"; };
+		277E0654190CF1D000291E49 /* GeoPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPointAnnotation.h; sourceTree = "<group>"; };
+		277E0655190CF1D000291E49 /* GeoPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPointAnnotation.m; sourceTree = "<group>"; };
+		27D44E9F19098B8700D81C32 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK.framework; sourceTree = "<group>"; };
+		27E79BFB190B3575004F92A9 /* Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bill.h; sourceTree = "<group>"; };
+		27E79BFC190B3575004F92A9 /* Bill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bill.m; sourceTree = "<group>"; };
+		27E79BFE190B3D3B004F92A9 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		27E79BFF190B3D3B004F92A9 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		27E79C01190B442F004F92A9 /* CreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreationViewController.h; sourceTree = "<group>"; };
+		27E79C02190B442F004F92A9 /* CreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +98,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277E064C190C9F7C00291E49 /* Parse.framework in Frameworks */,
+				277E064D190C9F7C00291E49 /* FacebookSDK.framework in Frameworks */,
+				277E0649190C6E7E00291E49 /* CoreLocation.framework in Frameworks */,
+				275F9BFC1908A9EF0064134C /* MobileCoreServices.framework in Frameworks */,
+				275F9BFA1908A94C0064134C /* SystemConfiguration.framework in Frameworks */,
+				275F9BF81908A8F50064134C /* CFNetwork.framework in Frameworks */,
 				275F9BC319089E380064134C /* CoreGraphics.framework in Frameworks */,
 				275F9BC519089E380064134C /* UIKit.framework in Frameworks */,
 				275F9BC119089E380064134C /* Foundation.framework in Frameworks */,
@@ -101,6 +145,14 @@
 		275F9BBF19089E380064134C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				277E064A190C9F7C00291E49 /* Parse.framework */,
+				277E064B190C9F7C00291E49 /* FacebookSDK.framework */,
+				277E0648190C6E7E00291E49 /* CoreLocation.framework */,
+				27D44E9F19098B8700D81C32 /* FacebookSDK.framework */,
+				275F9BFB1908A9EF0064134C /* MobileCoreServices.framework */,
+				275F9BF91908A94C0064134C /* SystemConfiguration.framework */,
+				275F9BF71908A8F50064134C /* CFNetwork.framework */,
+				275F9BF519089EA70064134C /* Parse.framework */,
 				275F9BC019089E380064134C /* Foundation.framework */,
 				275F9BC219089E380064134C /* CoreGraphics.framework */,
 				275F9BC419089E380064134C /* UIKit.framework */,
@@ -112,11 +164,27 @@
 		275F9BC619089E380064134C /* ParseSpliter */ = {
 			isa = PBXGroup;
 			children = (
-				275F9BCF19089E380064134C /* FinalPrototypeAppDelegate.h */,
-				275F9BD019089E380064134C /* FinalPrototypeAppDelegate.m */,
 				275F9BD219089E380064134C /* Main.storyboard */,
+				27E79BFB190B3575004F92A9 /* Bill.h */,
+				27E79BFC190B3575004F92A9 /* Bill.m */,
+				275F9BFD1908B0DD0064134C /* MBProgressHUD.h */,
+				275F9BFE1908B0DD0064134C /* MBProgressHUD.m */,
+				277E064E190CAA0200291E49 /* FBLoginViewController.h */,
+				277E064F190CAA0200291E49 /* FBLoginViewController.m */,
+				27E79BFE190B3D3B004F92A9 /* FirstViewController.h */,
+				27E79BFF190B3D3B004F92A9 /* FirstViewController.m */,
+				27E79C01190B442F004F92A9 /* CreationViewController.h */,
+				27E79C02190B442F004F92A9 /* CreationViewController.m */,
 				275F9BD519089E390064134C /* FinalPrototypeViewController.h */,
 				275F9BD619089E390064134C /* FinalPrototypeViewController.m */,
+				275F9C001908B2800064134C /* MyTableViewController.h */,
+				275F9C011908B2800064134C /* MyTableViewController.m */,
+				277E0651190CD61E00291E49 /* DetailBillViewController.h */,
+				277E0652190CD61E00291E49 /* DetailBillViewController.m */,
+				275F9BCF19089E380064134C /* FinalPrototypeAppDelegate.h */,
+				275F9BD019089E380064134C /* FinalPrototypeAppDelegate.m */,
+				277E0654190CF1D000291E49 /* GeoPointAnnotation.h */,
+				277E0655190CF1D000291E49 /* GeoPointAnnotation.m */,
 				275F9BD819089E390064134C /* Images.xcassets */,
 				275F9BC719089E380064134C /* Supporting Files */,
 			);
@@ -200,6 +268,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "08723 A4";
 				TargetAttributes = {
+					275F9BBC19089E380064134C = {
+						DevelopmentTeam = 9VUC3R8D65;
+					};
 					275F9BDD19089E390064134C = {
 						TestTargetID = 275F9BBC19089E380064134C;
 					};
@@ -250,9 +321,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E79BFD190B3575004F92A9 /* Bill.m in Sources */,
 				275F9BD119089E380064134C /* FinalPrototypeAppDelegate.m in Sources */,
+				277E0656190CF1D000291E49 /* GeoPointAnnotation.m in Sources */,
+				27E79C00190B3D3B004F92A9 /* FirstViewController.m in Sources */,
+				275F9C021908B2800064134C /* MyTableViewController.m in Sources */,
 				275F9BCD19089E380064134C /* main.m in Sources */,
 				275F9BD719089E390064134C /* FinalPrototypeViewController.m in Sources */,
+				277E0650190CAA0200291E49 /* FBLoginViewController.m in Sources */,
+				275F9BFF1908B0DD0064134C /* MBProgressHUD.m in Sources */,
+				277E0653190CD61E00291E49 /* DetailBillViewController.m in Sources */,
+				27E79C03190B442F004F92A9 /* CreationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +456,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/yusizhang/git/xcode,
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseSpliter/ParseSpliter-Prefix.pch";
 				INFOPLIST_FILE = "ParseSpliter/ParseSpliter-Info.plist";
@@ -390,6 +475,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/yusizhang/git/xcode,
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseSpliter/ParseSpliter-Prefix.pch";
 				INFOPLIST_FILE = "ParseSpliter/ParseSpliter-Info.plist";
@@ -457,6 +548,7 @@
 				275F9BF119089E390064134C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		275F9BF219089E390064134C /* Build configuration list for PBXNativeTarget "ParseSpliterTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +557,7 @@
 				275F9BF419089E390064134C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

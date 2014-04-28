@@ -12,6 +12,7 @@
 #import "MBProgressHUD.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "MyTableViewController.h"
+#import "Bill.h"
 
 
 @interface FirstViewController ()
@@ -59,9 +60,6 @@
 
     }
     
-    
-    
-    
 }
 
 #pragma mark - PFLogInViewControllerDelegate
@@ -70,6 +68,8 @@
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     
+    
+    
     //successfully login and set profile pic;
     FBRequest *request = [FBRequest requestForMe];
     // Send request to Facebook
@@ -77,8 +77,45 @@
         if (!error) {
             // result is a dictionary with the user's Facebook data
             NSDictionary *userData = (NSDictionary *)result;
+            //set profile pic
             NSString *facebookID = userData[@"id"];
             self.profile_uiview.profileID = facebookID;
+            
+            //fetch user's bill info and calculate overall balance;
+            //calculate positive1
+            NSString *name = userData[@"name"];
+            NSLog(@"Login name is %@", name);
+            PFQuery *query = [PFQuery queryWithClassName:@"Bill"];
+            
+            [query whereKey:@"owner" equalTo:name];
+            NSLog(query.debugDescription);
+            NSArray *objArray = [query findObjects];
+            double positive = 0;
+            
+            for ( PFObject *object in objArray) {
+                positive += [object[@"amount"] doubleValue];
+            }
+            NSNumber *number = [[NSNumber alloc] initWithDouble: positive];
+            NSLog(@"positive amount is %@",[number stringValue]);
+            
+            //calculate negetive2
+            PFQuery *query2 = [PFQuery queryWithClassName:@"Bill"];
+            [query2 whereKey:@"ownee" equalTo:name];
+            NSArray *objArray2 = [query2 findObjects];
+            NSLog(@"%@",objArray2.debugDescription);
+
+            double negetive = 0;
+            
+            for ( PFObject *object2 in objArray2) {
+                negetive += [object2[@"amount"] doubleValue];
+            }
+            NSNumber *number2 = [[NSNumber alloc] initWithDouble: negetive];
+            NSLog(@"negetive amount is %@",[number2 stringValue]);
+            
+            double balance = positive - negetive;
+            
+
+            
         }
     }];
     

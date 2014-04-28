@@ -87,6 +87,9 @@
         bill[@"location"] = _billObj.location;
         bill[@"lat"] = _billObj.lat;
         bill[@"lon"] = _billObj.lon;
+        NSData *imageData = UIImageJPEGRepresentation(_billObj.image, 1.00f);
+        PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:imageData];
+        bill[@"image"] = imageFile;
 //        bill[@"owneeid"] = [_billObj.ids objectAtIndex:i];
         NSLog(@"Final id is %@",[_billObj.ids objectAtIndex:i]);
         i++;

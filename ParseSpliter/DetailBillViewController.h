@@ -23,5 +23,6 @@
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
 
 @property (nonatomic, strong) PFObject *detailItem;
+@property (strong, nonatomic) IBOutlet UIImageView *image;
 
 @end

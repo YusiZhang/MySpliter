@@ -20,6 +20,7 @@
 @synthesize owner_lb;
 @synthesize time_lb;
 @synthesize amount_lb;
+@synthesize image;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,6 +42,8 @@
     owner_lb.text = _billObj.owner;
     amount_lb.text = [amount_lb.text stringByAppendingString:_billObj.amount];
     time_lb.text = _billObj.time;
+    
+    image.image = _billObj.image;
     
     // center our map view around this geopoint
     self.mapView.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake([_billObj.lat doubleValue], [_billObj.lon doubleValue]), MKCoordinateSpanMake(0.005f, 0.005f));

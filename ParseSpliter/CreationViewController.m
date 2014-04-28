@@ -54,6 +54,7 @@
     //*************************Object in Object need to be init**************//
     billObj.friends = [[NSMutableArray alloc] init];
     billObj.ids = [[NSMutableArray alloc]init];
+    billObj.image = [[UIImage alloc]init];
     //*************************Object in Object need to be init**************//
     
     locationManager = [[CLLocationManager alloc] init];
@@ -177,6 +178,15 @@
     
 }
 
+- (IBAction)clickPickImage_btn:(UIButton *)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
 
 #pragma mark - Navigation
 
@@ -231,9 +241,30 @@
     [locationManager stopUpdatingLocation];
 }
 
+#pragma mark - Return Keyboard deletege
 -(void)viewTapped:(UITapGestureRecognizer*)tapGr
 {
     [self.amout_tf resignFirstResponder];
+}
+
+
+#pragma mark - ImagePickerDelegete
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.image.image = chosenImage;
+    billObj.image = chosenImage;
+    
+    //    UIImageWriteToSavedPhotosAlbum(chosenImage, nil, nil, nil);
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
 }
 
 

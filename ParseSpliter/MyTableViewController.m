@@ -46,7 +46,8 @@
 {
     [super viewDidLoad];
     billObj = [[Bill alloc]init];
-    NSLog(@"Mytable view name is %@",_name);    
+//    billObj.image = [[UIImage alloc]init];
+    NSLog(@"Mytable view name is %@",_name);
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -179,6 +180,7 @@
         PFObject *object = [self.objects objectAtIndex:indexPath.row];
         
         Bill *temp = [[Bill alloc]init];
+        temp.image = [[UIImage alloc]init];
         
         temp.owner = [object objectForKey:@"owner"];
         temp.ownee = [object objectForKey:@"ownee"];
@@ -187,6 +189,10 @@
         temp.lat =[object objectForKey:@"lat"];
         temp.lon =[object objectForKey:@"lon"];
         temp.time = [object objectForKey:@"createdAt"];
+        
+        NSData *imagedata = [[object objectForKey:@"image"] getData];
+        temp.image = [[UIImage alloc]initWithData:imagedata];
+        
         
         NSLog(@"%@",[object objectForKey:@"ownee"]);
         

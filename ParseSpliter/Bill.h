@@ -23,6 +23,8 @@
 @property (strong, nonatomic) NSNumber *lon;
 @property (strong, nonatomic) NSNumber *lat;
 
+@property (strong, nonatomic) UIImage *image;
+
 
 
 

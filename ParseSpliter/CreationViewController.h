@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Bill.h"
 #import <CoreLocation/CoreLocation.h>
-@interface CreationViewController : UIViewController <CLLocationManagerDelegate>
+@interface CreationViewController : UIViewController <CLLocationManagerDelegate, UIImagePickerControllerDelegate,
+UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *amout_lb;
 
 @property (strong, nonatomic) IBOutlet UILabel *location_lb;
@@ -17,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *count_lb;
 //Amount text field
 @property (strong, nonatomic) IBOutlet UITextField *amout_tf;
+@property (strong, nonatomic) IBOutlet UIImageView *image;
 
 //@property Bill *billObj;
 
@@ -25,5 +27,6 @@
 - (IBAction)clickPickLocation:(UIButton *)sender;
 - (IBAction)clickNext:(UIButton *)sender;
 
+- (IBAction)clickPickImage_btn:(UIButton *)sender;
 
 @end

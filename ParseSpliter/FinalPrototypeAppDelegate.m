@@ -21,6 +21,9 @@
     
 //    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x08224b)];
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav.bg.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
 
 
     [FBProfilePictureView class];

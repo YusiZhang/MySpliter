@@ -47,6 +47,9 @@
 		AFECACD4190EFD1600E158BB /* myspliter-2.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACD3190EFD1600E158BB /* myspliter-2.png */; };
 		AFECACD6190EFD6200E158BB /* history-3.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACD5190EFD6200E158BB /* history-3.png */; };
 		AFECACD8190EFD6A00E158BB /* plus-1.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACD7190EFD6A00E158BB /* plus-1.png */; };
+		AFECACDA190F0E2500E158BB /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACD9190F0E2400E158BB /* camera.png */; };
+		AFECACDC190F338100E158BB /* camera-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACDB190F338100E158BB /* camera-icon.png */; };
+		AFECACDE190F33B500E158BB /* camera-1.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACDD190F33B500E158BB /* camera-1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,9 @@
 		AFECACD3190EFD1600E158BB /* myspliter-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myspliter-2.png"; sourceTree = "<group>"; };
 		AFECACD5190EFD6200E158BB /* history-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history-3.png"; sourceTree = "<group>"; };
 		AFECACD7190EFD6A00E158BB /* plus-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-1.png"; sourceTree = "<group>"; };
+		AFECACD9190F0E2400E158BB /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		AFECACDB190F338100E158BB /* camera-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-icon.png"; sourceTree = "<group>"; };
+		AFECACDD190F33B500E158BB /* camera-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +216,9 @@
 				277E0654190CF1D000291E49 /* GeoPointAnnotation.h */,
 				277E0655190CF1D000291E49 /* GeoPointAnnotation.m */,
 				275F9BD819089E390064134C /* Images.xcassets */,
+				AFECACDD190F33B500E158BB /* camera-1.png */,
+				AFECACDB190F338100E158BB /* camera-icon.png */,
+				AFECACD9190F0E2400E158BB /* camera.png */,
 				AFECACD7190EFD6A00E158BB /* plus-1.png */,
 				AFECACD5190EFD6200E158BB /* history-3.png */,
 				AFECACD3190EFD1600E158BB /* myspliter-2.png */,
@@ -338,8 +347,11 @@
 			files = (
 				AFECACD2190EFBD900E158BB /* grass.png in Resources */,
 				275F9BD919089E390064134C /* Images.xcassets in Resources */,
+				AFECACDC190F338100E158BB /* camera-icon.png in Resources */,
 				27E93824190EC37C00217E13 /* ios-7-photo-icon-pn.png in Resources */,
+				AFECACDE190F33B500E158BB /* camera-1.png in Resources */,
 				AFECACAC190EB6E000E158BB /* BlueBackground.png in Resources */,
+				AFECACDA190F0E2500E158BB /* camera.png in Resources */,
 				275F9BCB19089E380064134C /* InfoPlist.strings in Resources */,
 				AFECACD4190EFD1600E158BB /* myspliter-2.png in Resources */,
 				AFECACA8190E08A200E158BB /* normal.png in Resources */,
@@ -513,6 +525,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseSpliter/ParseSpliter-Prefix.pch";
 				INFOPLIST_FILE = "ParseSpliter/ParseSpliter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -532,6 +545,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseSpliter/ParseSpliter-Prefix.pch";
 				INFOPLIST_FILE = "ParseSpliter/ParseSpliter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -58,6 +58,8 @@
     annotation.title = _billObj.location;
     [self.mapView addAnnotation:annotation];
     
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title.png"]];
+    
 }
 
 #pragma mark - MKMapViewDelegate

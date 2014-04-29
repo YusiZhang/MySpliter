@@ -46,7 +46,7 @@
     name = [[NSString alloc]init];
     NSLog(@"Bundle ID: %@",[[NSBundle mainBundle] bundleIdentifier]);
     
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"myspliter-2.png"]];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title.png"]];
     dic = [[NSMutableDictionary alloc]init];
     dic2 = [[NSMutableDictionary alloc]init];
     mainArray = [[NSMutableArray alloc] initWithObjects:@"this", @"is", @"a", @"table", @"view", nil];

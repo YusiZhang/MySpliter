@@ -289,7 +289,7 @@
 #warning Incomplete method implementation.
     NSLog(@"in section is called");
     // Return the number of rows in the section.
-    return 20;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -302,7 +302,7 @@
     
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    if ([dic count] > 0 ) {
+    if ([dic count] > 0 && [indexPath row] < [dic count] ) {
         
         
         NSString *key = [dic allKeys][indexPath.row ];

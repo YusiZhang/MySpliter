@@ -9,8 +9,11 @@
 #import "MyTableViewController.h"
 #import "Bill.h"
 #import "DetailBillViewController.h"
+#import "QuartzCore/QuartzCore.h"
 
-@interface MyTableViewController ()
+@interface MyTableViewController (){
+    
+}
    
 
 
@@ -18,6 +21,7 @@
 
 @implementation MyTableViewController {
      Bill *billObj;
+    FBProfilePictureView *profile_pic;
 }
 
 
@@ -46,6 +50,7 @@
 {
     [super viewDidLoad];
     billObj = [[Bill alloc]init];
+    profile_pic = [[FBProfilePictureView alloc]init];
 //    billObj.image = [[UIImage alloc]init];
     NSLog(@"Mytable view name is %@",_name);
     // Uncomment the following line to preserve selection between presentations.
@@ -87,11 +92,27 @@
     
     // Configure the cell
     cell.textLabel.text = [object objectForKey:@"amount"];
+    
+//    profile_pic = [object objectForKey:@"owneeid"];
+//    UIImage *img = [self getImageFromView:profile_pic];
+//    NSLog(img.debugDescription);
+    NSString *fileName = [object objectForKey:@"owneeid"];
+    NSString *filePath = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture",fileName];
+    UIImage *img = [UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString:filePath]]];
+
    
     if ([ [object objectForKey:@"owner" ] isEqualToString: _name ]) {
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ own you",[object objectForKey:@"ownee"]];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ owe you",[object objectForKey:@"ownee"]];
+      
+//            cell.imageView.image = [UIImage imageNamed:@"camera-icon.png"];;
+        cell.imageView.image = img;
+              
     } else {
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"you own %@",[object objectForKey:@"owner"]];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"you owe %@",[object objectForKey:@"owner"]];
+//        cell.detailTextLabel.backgroundColor = [UIColor blueColor];
+//            cell.imageView.image = [UIImage imageNamed:@"camera-icon.png"];;
+        
+        cell.imageView.image = img;
     }
 
     
@@ -208,6 +229,12 @@
     }
 }
 
-
+-(UIImage *)getImageFromView:(UIView *)view{
+    UIGraphicsBeginImageContext(view.bounds.size);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
 
 @end

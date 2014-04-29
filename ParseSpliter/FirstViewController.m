@@ -52,6 +52,10 @@
     mainArray = [[NSMutableArray alloc] initWithObjects:@"this", @"is", @"a", @"table", @"view", nil];
     tableView.delegate = self;
     tableView.dataSource = self;
+
+    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title.png"]];
+    
     
 }
 

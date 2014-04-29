@@ -211,8 +211,7 @@
         temp.location = [object objectForKey:@"location"];
         temp.lat =[object objectForKey:@"lat"];
         temp.lon =[object objectForKey:@"lon"];
-        temp.time = [object objectForKey:@"createdAt"];
-        
+
         NSData *imagedata = [[object objectForKey:@"image"] getData];
         temp.image = [[UIImage alloc]initWithData:imagedata];
         
@@ -220,12 +219,19 @@
         NSLog(@"%@",[object objectForKey:@"ownee"]);
         
         
-        NSDate *date= [object objectForKey:@"createdAt"];
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"yyyy"];
-        NSString *stringFromDate = [formatter stringFromDate:date];
-        temp.time = stringFromDate;
+//        NSDate *date= [[NSDate alloc]init];
+//        date= [object objectForKey:@"createdAt"];
+//        NSLog(@"Parse Time Date is %@",date.debugDescription);
+//        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//        [formatter setDateFormat:@"yyyy"];
+//        NSString *stringFromDate = [formatter stringFromDate:date];
         
+        NSDate *updated = [object updatedAt];
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"EEE, MMM d, h:mm a"];
+        temp.time = [NSString stringWithFormat:@"Lasted Updated: %@", [dateFormat stringFromDate:updated]];
+        
+        NSLog(@"Parse Time Temp is %@",temp.time);
         dvc.billObj = temp;
 
     }

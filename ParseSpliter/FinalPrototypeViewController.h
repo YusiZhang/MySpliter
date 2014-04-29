@@ -18,6 +18,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *average_lb;
 
+@property (strong, nonatomic) IBOutlet UILabel *description;
 
 @property (nonatomic) Bill *billObj;
 
@@ -27,6 +28,6 @@
 
 - (IBAction)upload_btn:(UIButton *)sender;
 
-- (IBAction)share_btn:(UIButton *)sender;
+//- (IBAction)share_btn:(UIButton *)sender;
 
 @end

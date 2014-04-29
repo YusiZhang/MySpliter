@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSString *time;
 @property (strong, nonatomic) NSString *location;
 @property (strong, nonatomic) NSString *amount;
+@property (strong, nonatomic) NSString *description;
 
 @property (strong, nonatomic) NSString *count;
 @property (strong, nonatomic) NSMutableArray *friends;

@@ -31,6 +31,7 @@
 @synthesize amout_tf;
 @synthesize count_lb;
 @synthesize location_lb;
+@synthesize description_tf;
 //@synthesize billObj;
 
 
@@ -208,7 +209,7 @@
         billObj.location = location_lb.text;
         billObj.count = count_lb.text;
         [billObj setAmount:amout_tf.text];
-        
+        billObj.description = description_tf.text;
         
         NSLog(@"amount_tf.text: %@", amout_tf.text);
         NSLog(@"billObj.amount: %@", billObj.amount);

@@ -18,6 +18,9 @@ UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *count_lb;
 //Amount text field
 @property (strong, nonatomic) IBOutlet UITextField *amout_tf;
+@property (strong, nonatomic) IBOutlet UITextField *description_tf;
+
+//image
 @property (strong, nonatomic) IBOutlet UIImageView *image;
 
 //@property Bill *billObj;

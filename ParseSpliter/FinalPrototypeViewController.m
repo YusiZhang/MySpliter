@@ -25,6 +25,7 @@
 @synthesize friends_tv;
 @synthesize location_lb;
 @synthesize average_lb;
+@synthesize description;
 
 - (void)viewDidLoad
 {
@@ -51,7 +52,10 @@
     for (NSString *name in _billObj.friends) {
         [name stringByAppendingString:@"\n"];
         friends_tv.text = [friends_tv.text stringByAppendingString:name];
+        friends_tv.text = [friends_tv.text stringByAppendingString:@"; "];
     }
+    //set description
+    description.text = _billObj.description;
     
 
 }
@@ -65,11 +69,7 @@
 
 - (IBAction)upload_btn:(UIButton *)sender {
     
-   
-    
-//    bill[@"owner"] = owner_txt.text;
-//    bill[@"ownee"] = ownee_txt.text;
-//    bill[@"amount"] = amount_txt.text;
+
     
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
@@ -88,6 +88,7 @@
         bill[@"lat"] = _billObj.lat;
         bill[@"lon"] = _billObj.lon;
         bill[@"owneeid"] = _billObj.ids[i];
+        bill[@"description"] = _billObj.description;
         NSData *imageData = UIImageJPEGRepresentation(_billObj.image, 1.00f);
         PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:imageData];
         bill[@"image"] = imageFile;
@@ -110,9 +111,7 @@
                 if (index== 1) {
                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Complete" message:@"Successfully saved the recipe" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                     [alert show];
-                    
-                    
-                }
+                                    }
                 // Notify table view to reload the recipes from Parse cloud
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshTable" object:self];
                 
@@ -131,20 +130,19 @@
     }
     
     
-}
-
-- (IBAction)share_btn:(UIButton *)sender {
     
-
-
-     // publish just a link using the Feed dialog
-        
-        // Put together the dialog parameters
-    NSString *friends = [[NSString alloc]init];
-    for (NSString *name in _billObj.friends) {
-        friends = [friends stringByAppendingString:name];
-        friends = [friends stringByAppendingString:@", "];
-    }
+}
+//alert delegete
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        NSLog(@"user pressed Button Indexed 0");
+        NSString *friends = [[NSString alloc]init];
+        for (NSString *name in _billObj.friends) {
+            friends = [friends stringByAppendingString:name];
+            friends = [friends stringByAppendingString:@"; "];
+        }
         NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                        @"MySpliter", @"name",
                                        @"Check Bills on MySpliter", @"caption",
@@ -181,13 +179,75 @@
                                                           }
                                                       }
                                                   }];
+        
+        
+        
+        
+        
 
-   
-    //after upload successfully back to homepage
-//    FirstViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstViewController"];
-//    [self presentViewController:vc animated:YES completion:nil];
-
+    }
+    else
+    {
+        NSLog(@"user pressed Button Indexed 1");
+        // Any action can be performed here
+    }
 }
+
+//- (IBAction)share_btn:(UIButton *)sender {
+//    
+//
+//
+//     // publish just a link using the Feed dialog
+//    
+//        // Put together the dialog parameters
+//    NSString *friends = [[NSString alloc]init];
+//    for (NSString *name in _billObj.friends) {
+//        friends = [friends stringByAppendingString:name];
+//        friends = [friends stringByAppendingString:@"; "];
+//    }
+//        NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+//                                       @"MySpliter", @"name",
+//                                       @"Check Bills on MySpliter", @"caption",
+//                                       friends, @"description",
+//                                       @"https://developers.facebook.com/docs/ios/share/", @"link",
+//                                       @"http://i.imgur.com/g3Qc1HN.png", @"picture",
+//                                       nil];
+//        
+//        // Show the feed dialog
+//        [FBWebDialogs presentFeedDialogModallyWithSession:nil
+//                                               parameters:params
+//                                                  handler:^(FBWebDialogResult result, NSURL *resultURL, NSError *error) {
+//                                                      if (error) {
+//                                                          // An error occurred, we need to handle the error
+//                                                          // See: https://developers.facebook.com/docs/ios/errors
+//                                                          NSLog(@"Error publishing story: %@", error.description);
+//                                                      } else {
+//                                                          if (result == FBWebDialogResultDialogNotCompleted) {
+//                                                              // User canceled.
+//                                                              NSLog(@"User cancelled.");
+//                                                          } else {
+//                                                              // Handle the publish feed callback
+//                                                              NSDictionary *urlParams = [self parseURLParams:[resultURL query]];
+//                                                              
+//                                                              if (![urlParams valueForKey:@"post_id"]) {
+//                                                                  // User canceled.
+//                                                                  NSLog(@"User cancelled.");
+//                                                                  
+//                                                              } else {
+//                                                                  // User clicked the Share button
+//                                                                  NSString *result = [NSString stringWithFormat: @"Posted story, id: %@", [urlParams valueForKey:@"post_id"]];
+//                                                                  NSLog(@"result %@", result);
+//                                                              }
+//                                                          }
+//                                                      }
+//                                                  }];
+//
+//   
+//    //after upload successfully back to homepage
+////    FirstViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstViewController"];
+////    [self presentViewController:vc animated:YES completion:nil];
+//
+//}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {

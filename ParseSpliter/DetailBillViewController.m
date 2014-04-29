@@ -21,6 +21,7 @@
 @synthesize time_lb;
 @synthesize amount_lb;
 @synthesize image;
+@synthesize description_tf;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,6 +45,7 @@
     time_lb.text = _billObj.time;
     
     image.image = _billObj.image;
+    description_tf.text = _billObj.description;
     
     // center our map view around this geopoint
     self.mapView.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake([_billObj.lat doubleValue], [_billObj.lon doubleValue]), MKCoordinateSpanMake(0.005f, 0.005f));

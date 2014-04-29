@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *ownee_lb;
 @property (strong, nonatomic) IBOutlet UILabel *owner_lb;
 @property (strong, nonatomic) IBOutlet UILabel *amount_lb;
+@property (strong, nonatomic) IBOutlet UILabel *description_tf;
 
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
 

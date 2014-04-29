@@ -78,10 +78,8 @@
     double average = [amount doubleValue] / [count doubleValue];
     NSNumber *myaverage = [NSNumber numberWithDouble:average];
     int i = 0;
-   
+    int index = [_billObj.friends count];
     for (NSString *name in _billObj.friends) {
-        
-        int count = [_billObj.friends count];
         PFObject *bill = [PFObject objectWithClassName:@"Bill"];
         bill[@"owner"] = _billObj.owner;
         bill[@"ownee"] = name;
@@ -89,6 +87,7 @@
         bill[@"location"] = _billObj.location;
         bill[@"lat"] = _billObj.lat;
         bill[@"lon"] = _billObj.lon;
+        bill[@"owneeid"] = _billObj.ids[i];
         NSData *imageData = UIImageJPEGRepresentation(_billObj.image, 1.00f);
         PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:imageData];
         bill[@"image"] = imageFile;
@@ -108,7 +107,7 @@
             
             if (!error) {
                 // Show success message
-                if (count == 1) {
+                if (index== 1) {
                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Complete" message:@"Successfully saved the recipe" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                     [alert show];
                     
@@ -127,7 +126,7 @@
             }
             
         }];
-        count--;
+        index--;
         
     }
     

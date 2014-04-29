@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
+
 @interface MyTableViewController : PFQueryTableViewController
 
 @property (nonatomic) NSString *name;
+//@property (strong, nonatomic) IBOutlet FBProfilePictureView *profile_pic;
+
+
 
 @end

@@ -302,7 +302,7 @@
     
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    if ([dic count] > 0 ) {
+    if ([dic count] > 0 && [indexPath row] < [dic count] ) {
         
         
         NSString *key = [dic allKeys][indexPath.row ];

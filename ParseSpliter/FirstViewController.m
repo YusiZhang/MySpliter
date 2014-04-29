@@ -289,7 +289,7 @@
 #warning Incomplete method implementation.
     NSLog(@"in section is called");
     // Return the number of rows in the section.
-    return 20;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

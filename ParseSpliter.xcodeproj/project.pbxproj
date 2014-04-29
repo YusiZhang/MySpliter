@@ -50,6 +50,7 @@
 		AFECACDA190F0E2500E158BB /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACD9190F0E2400E158BB /* camera.png */; };
 		AFECACDC190F338100E158BB /* camera-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACDB190F338100E158BB /* camera-icon.png */; };
 		AFECACDE190F33B500E158BB /* camera-1.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACDD190F33B500E158BB /* camera-1.png */; };
+		AFECACE0190F4F9C00E158BB /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = AFECACDF190F4F9C00E158BB /* title.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		AFECACD9190F0E2400E158BB /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		AFECACDB190F338100E158BB /* camera-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-icon.png"; sourceTree = "<group>"; };
 		AFECACDD190F33B500E158BB /* camera-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-1.png"; sourceTree = "<group>"; };
+		AFECACDF190F4F9C00E158BB /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 				277E0654190CF1D000291E49 /* GeoPointAnnotation.h */,
 				277E0655190CF1D000291E49 /* GeoPointAnnotation.m */,
 				275F9BD819089E390064134C /* Images.xcassets */,
+				AFECACDF190F4F9C00E158BB /* title.png */,
 				AFECACDD190F33B500E158BB /* camera-1.png */,
 				AFECACDB190F338100E158BB /* camera-icon.png */,
 				AFECACD9190F0E2400E158BB /* camera.png */,
@@ -348,6 +351,7 @@
 				AFECACD2190EFBD900E158BB /* grass.png in Resources */,
 				275F9BD919089E390064134C /* Images.xcassets in Resources */,
 				AFECACDC190F338100E158BB /* camera-icon.png in Resources */,
+				AFECACE0190F4F9C00E158BB /* title.png in Resources */,
 				27E93824190EC37C00217E13 /* ios-7-photo-icon-pn.png in Resources */,
 				AFECACDE190F33B500E158BB /* camera-1.png in Resources */,
 				AFECACAC190EB6E000E158BB /* BlueBackground.png in Resources */,

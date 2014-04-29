@@ -29,6 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title.png"]];
 
     //set amount
    amount_lb.text = [amount_lb.text stringByAppendingString:_billObj.amount];

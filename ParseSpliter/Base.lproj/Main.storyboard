@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tBk-eU-5Nn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tBk-eU-5Nn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -46,7 +46,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="veq-4u-adO">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="veq-4u-adO">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="veq-4u-adO" id="ypl-ws-gcc">
@@ -55,6 +55,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="NSe-m9-NoU" id="TfV-C2-BbW"/>
+                                    <outlet property="delegate" destination="NSe-m9-NoU" id="Fvu-pk-55e"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -88,7 +92,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="owned_lb" destination="4fb-kS-Dl8" id="gBr-48-GKF"/>
                         <outlet property="profile_uiview" destination="L1e-vo-66l" id="UdY-fz-lWs"/>
+                        <outlet property="tableView" destination="O43-Xm-GUh" id="XSM-cg-kCQ"/>
+                        <outlet property="youown_lb" destination="PmP-sk-U49" id="Vmh-HB-fka"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6I-1W-lVP" userLabel="First Responder" sceneMemberID="firstResponder"/>

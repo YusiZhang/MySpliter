@@ -46,6 +46,7 @@
 - (void)viewDidLoad
 
 {
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title.png"]];
     
     [super viewDidLoad];
     //init billObj

@@ -59,7 +59,7 @@
     
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     //Show login page
@@ -193,8 +193,9 @@
                     }
                 }
             }
-            NSLog(dic.debugDescription);
+            NSLog(@"First Dic %@",dic.debugDescription);
             
+            NSLog(@"Second Dic Starting!!!!");
             //            NSMutableDictionary *dic2 = [[NSMutableDictionary alloc]init];
             PFQuery *query4 = [PFQuery queryWithClassName:@"Bill"];
             [query4 whereKey:@"ownee" equalTo:name];
@@ -213,22 +214,30 @@
                     }
                 }
             }
+            NSLog(@"2 Dic %@",dic2.debugDescription);
+
+            NSLog(@"Second Dic Starting222222!!!!");
             
-            for (NSString *ownee in dic) {
+            for (NSString *ownee in [dic allKeys]) {
+                NSLog(ownee.debugDescription);
                 if ([[dic2 allKeys] containsObject:ownee]) {
                     double sum = [dic[ownee] doubleValue] + [dic2[ownee] doubleValue];
                     NSNumber *result = [[NSNumber alloc] initWithDouble: sum];
                     [dic setValue:[result stringValue] forKey:ownee];
                 }
             }
+            NSLog(@"Second Dic Starting333333!!!!");
             //add those not created by owner.
-            for (NSString *owner in dic2) {
+            for (NSString *owner in [dic2 allKeys]) {
+                
                 if ([[dic allKeys] containsObject:owner] == NO) {
                     double sum = [dic2[owner] doubleValue];
                     NSNumber *result = [[NSNumber alloc] initWithDouble: sum];
                     [dic setValue:[result stringValue] forKey:owner];
                 }
             }
+            
+            NSLog(@"Second Dic finished%@",dic.debugDescription);
             
             [tableView reloadData];
             
@@ -298,7 +307,20 @@
 #warning Incomplete method implementation.
     NSLog(@"in section is called");
     // Return the number of rows in the section.
-    return [dic count] ;
+    
+//    return [dic count] ;
+
+    
+//    if ([dic count] == 0) {
+//        NSLog(@"dic count is 0");
+//        return 5;
+//    } else {
+//        NSNumber *number = [[NSNumber alloc]initWithInteger:[dic count]];
+//        NSLog(@"dic count is : @%",[number stringValue]);
+//        return [dic count];
+//    }
+
+    return [dic count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

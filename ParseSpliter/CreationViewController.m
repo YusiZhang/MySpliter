@@ -249,6 +249,7 @@
 -(void)viewTapped:(UITapGestureRecognizer*)tapGr
 {
     [self.amout_tf resignFirstResponder];
+    [self.description_tf resignFirstResponder];
 }
 
 

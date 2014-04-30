@@ -189,11 +189,11 @@
                                                           }
                                                       }
                                                   }];
-        
-        
-        
-        
-        
+        FirstViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstViewController"];
+//        [self.navigationController presentedViewController:vc];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+//
+      
 
     }
     else
@@ -253,9 +253,9 @@
 //                                                  }];
 //
 //   
-//    //after upload successfully back to homepage
-////    FirstViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstViewController"];
-////    [self presentViewController:vc animated:YES completion:nil];
+    //after upload successfully back to homepage
+//    FirstViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstViewController"];
+//    [self presentViewController:vc animated:YES completion:nil];
 //
 //}
 

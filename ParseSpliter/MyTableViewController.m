@@ -108,7 +108,7 @@
     
    
     if ([ [object objectForKey:@"owner" ] isEqualToString: _name ]) {
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ owe you",[object objectForKey:@"ownee"]];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ owes you",[object objectForKey:@"ownee"]];
       
 //            cell.imageView.image = [UIImage imageNamed:@"camera-icon.png"];;
         cell.imageView.image = img;

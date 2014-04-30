@@ -302,10 +302,10 @@
     
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    if ([dic count] > 0 && [indexPath row] < [dic count] ) {
+    if ([dic count] > 0) {
         
         
-        NSString *key = [dic allKeys][indexPath.row ];
+        NSString *key = [dic allKeys][indexPath.row];
         NSLog(key.debugDescription);
         NSString *amount = [dic objectForKey:key];
         NSString *owner = key;

@@ -311,10 +311,10 @@
     
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    if ([dic count] > 0 && [indexPath row] < [dic count] ) {
+    if ([dic count] > 0) {
         
         
-        NSString *key = [dic allKeys][indexPath.row ];
+        NSString *key = [dic allKeys][indexPath.row];
         NSLog(key.debugDescription);
         NSString *amount = [dic objectForKey:key];
         NSString *owner = key;
@@ -322,7 +322,7 @@
 
         cell.textLabel.text  = owner;
 //        cell.detailTextLabel.text  = amount;
-        cell.textLabel.text = [cell.textLabel.text stringByAppendingString:@": "];
+        cell.textLabel.text = [cell.textLabel.text stringByAppendingString:@": \t $ "];
         cell.textLabel.text = [cell.textLabel.text stringByAppendingString:amount];
 
     }

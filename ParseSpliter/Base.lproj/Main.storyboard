@@ -82,6 +82,20 @@
                                 <color key="textColor" red="0.13725490196078433" green="0.80392156862745101" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="owe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CY0-5f-Fk4">
+                                <rect key="frame" x="31" y="172" width="121" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="owed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTT-ee-zYh">
+                                <rect key="frame" x="190" y="172" width="110" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -114,6 +128,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="owe" destination="CY0-5f-Fk4" id="EpX-KY-eWE"/>
+                        <outlet property="owed" destination="sTT-ee-zYh" id="ofn-4y-DYz"/>
                         <outlet property="owned_lb" destination="4fb-kS-Dl8" id="gBr-48-GKF"/>
                         <outlet property="profile_uiview" destination="L1e-vo-66l" id="UdY-fz-lWs"/>
                         <outlet property="tableView" destination="O43-Xm-GUh" id="XSM-cg-kCQ"/>

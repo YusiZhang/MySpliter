@@ -24,4 +24,11 @@
 @property (strong, nonatomic) IBOutlet UILabel *youown_lb;
 @property (strong, nonatomic) IBOutlet UILabel *owned_lb;
 
+
+@property (strong, nonatomic) IBOutlet UILabel *owe;
+
+@property (strong, nonatomic) IBOutlet UILabel *owed;
+
+
+
 @end

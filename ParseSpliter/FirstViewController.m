@@ -313,7 +313,7 @@
 
         cell.textLabel.text  = owner;
 //        cell.detailTextLabel.text  = amount;
-        cell.textLabel.text = [cell.textLabel.text stringByAppendingString:@": "];
+        cell.textLabel.text = [cell.textLabel.text stringByAppendingString:@": \t $ "];
         cell.textLabel.text = [cell.textLabel.text stringByAppendingString:amount];
 
     }

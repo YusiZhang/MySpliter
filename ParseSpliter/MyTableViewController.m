@@ -93,7 +93,8 @@
     }
     
     // Configure the cell
-    cell.textLabel.text = [object objectForKey:@"amount"];
+    cell.textLabel.text = @"$ ";
+    cell.textLabel.text = [cell.textLabel.text stringByAppendingString:[object objectForKey:@"amount"]];
     
 //    profile_pic = [object objectForKey:@"owneeid"];
 //    UIImage *img = [self getImageFromView:profile_pic];
@@ -101,7 +102,10 @@
     NSString *fileName = [object objectForKey:@"owneeid"];
     NSString *filePath = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture",fileName];
     UIImage *img = [UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString:filePath]]];
-
+//    img.profile_uiview.layer.cornerRadius = self.profile_uiview.frame.size.width / 2;
+//    UIImageView *iv = [[UIImageView alloc]initWithImage:img];
+//    iv.layer.cornerRadius = iv.layer.frame.size.width / 2;
+    
    
     if ([ [object objectForKey:@"owner" ] isEqualToString: _name ]) {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ owe you",[object objectForKey:@"ownee"]];

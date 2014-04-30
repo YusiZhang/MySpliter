@@ -83,7 +83,17 @@
         PFObject *bill = [PFObject objectWithClassName:@"Bill"];
         bill[@"owner"] = _billObj.owner;
         bill[@"ownee"] = name;
-        bill[@"amount"] = [myaverage stringValue];
+
+        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+        
+        [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        
+        [formatter setMaximumFractionDigits:2];
+        
+        [formatter setRoundingMode: NSNumberFormatterRoundUp];
+
+        NSString *numberString = [formatter stringFromNumber:[NSNumber numberWithFloat:[myaverage floatValue]]];
+        bill[@"amount"] = numberString;
         bill[@"location"] = _billObj.location;
         bill[@"lat"] = _billObj.lat;
         bill[@"lon"] = _billObj.lon;
@@ -109,7 +119,7 @@
             if (!error) {
                 // Show success message
                 if (index== 1) {
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Complete" message:@"Successfully saved the recipe" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Complete" message:@"Your bill is created." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                     [alert show];
                                     }
                 // Notify table view to reload the recipes from Parse cloud

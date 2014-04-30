@@ -171,6 +171,7 @@
             
             
 //            double balance = positive - negetive;
+            
             //============================================================
             //calculate overall group by people
             //============================================================
@@ -218,6 +219,14 @@
                     double sum = [dic[ownee] doubleValue] + [dic2[ownee] doubleValue];
                     NSNumber *result = [[NSNumber alloc] initWithDouble: sum];
                     [dic setValue:[result stringValue] forKey:ownee];
+                }
+            }
+            //add those not created by owner.
+            for (NSString *owner in dic2) {
+                if ([[dic allKeys] containsObject:owner] == NO) {
+                    double sum = [dic2[owner] doubleValue];
+                    NSNumber *result = [[NSNumber alloc] initWithDouble: sum];
+                    [dic setValue:[result stringValue] forKey:owner];
                 }
             }
             

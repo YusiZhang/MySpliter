@@ -151,7 +151,7 @@
             NSNumber *number = [[NSNumber alloc] initWithDouble: positive];
             NSLog(@"positive amount is %@",[number stringValue]);
 //            owned_lb.text = [owned_lb.text stringByAppendingString:[number stringValue]];
-            owe.text =[number stringValue];
+            owed.text =[number stringValue];
             //============================================================
             //calculate negetive2
             //============================================================
@@ -169,7 +169,7 @@
             NSNumber *number2 = [[NSNumber alloc] initWithDouble: negetive];
             NSLog(@"negetive amount is %@",[number2 stringValue]);
 //            youown_lb.text = [youown_lb.text stringByAppendingString:[number2 stringValue]];
-            owed.text =[number2 stringValue];
+            owe.text =[number2 stringValue];
             
             
 //            double balance = positive - negetive;

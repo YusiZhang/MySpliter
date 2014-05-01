@@ -108,12 +108,14 @@
     
    
     if ([ [object objectForKey:@"owner" ] isEqualToString: _name ]) {
+        cell.detailTextLabel.textColor = [UIColor colorWithRed:35/255.0 green:205/255.0 blue:183/255.0 alpha:1];
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ owes you",[object objectForKey:@"ownee"]];
       
 //            cell.imageView.image = [UIImage imageNamed:@"camera-icon.png"];;
         cell.imageView.image = img;
               
     } else {
+        cell.detailTextLabel.textColor = [UIColor colorWithRed:235/255.0 green:74/255.0 blue:63/255.0 alpha:1];
         cell.detailTextLabel.text = [NSString stringWithFormat:@"you owe %@",[object objectForKey:@"owner"]];
 //        cell.detailTextLabel.backgroundColor = [UIColor blueColor];
 //            cell.imageView.image = [UIImage imageNamed:@"camera-icon.png"];;
